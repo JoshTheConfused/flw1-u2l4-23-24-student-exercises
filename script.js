@@ -7,6 +7,12 @@ let photos = ["https://preview.redd.it/if-the-show-is-successful-what-would-be-g
   "http://thelovelymusings.com/wp-content/uploads/2021/01/umbrella-academy.jpg"
 ];
 
+photos.forEach(function(photoLink) { //Much simpler than writing it out for each photo
+  let show = document.createElement("img");
+  show.src = photoLink;
+  body.appendChild(show);
+});
+
 let show1 = document.createElement("img")
 let show2 = document.createElement("img")
 let show3 = document.createElement("img")
@@ -15,10 +21,14 @@ let show5 = document.createElement("img")
 
 show1.src = photos[0];
 // 1. Update the src for each variable - use the line above as a reference.
-
-
+show2.src = photos[1];
+show3.src = photos[2];
+show4.src = photos[3];
+show5.src = photos[4];
 
 body.appendChild(show1);
 // 2. Append each show to the body - use the line above as a reference.
-
-
+body.appendChild(show2);
+body.appendChild(show3);
+body.appendChild(show4);
+body.appendChild(show5);
